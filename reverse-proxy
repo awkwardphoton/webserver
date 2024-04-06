@@ -11,8 +11,11 @@ server {
     }
 }
 server {
-    listen 80;
+    listen 443 ssl;
     server_name emby.alvarium.uk;
+
+    ssl_certificate /etc/letsencrypt/live/emby.alvarium.uk/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/emby.alvarium.uk/privkey.pem;
 
     location / {
         proxy_pass http://192.168.86.32:8096;
