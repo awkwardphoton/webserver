@@ -97,3 +97,17 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html;
+
+    server_name _;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+
