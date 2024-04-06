@@ -101,7 +101,7 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
-    root /var/www/html;
+    root /home/user/ethan/Alvarium;
     index index.html;
 
     server_name _;
