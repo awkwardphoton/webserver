@@ -87,7 +87,7 @@ server {
 }
 server {
     listen 80;
-    server_name qtbittorrent.alvarium.uk;
+    server_name qbittorrent.alvarium.uk;
 
     location / {
         proxy_pass http://192.168.86.32:8080;
